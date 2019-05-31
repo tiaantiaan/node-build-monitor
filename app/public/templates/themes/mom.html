@@ -1,0 +1,70 @@
+<div class="mom full-size">
+  <div class="flex-container" data-bind="foreach: builds">
+    <div data-bind='hover: isMenuVisible' class="flex-item">
+      <div data-bind="fade: isMenuAvailable() && isMenuVisible(), fadeInDuration: 200, fadeOutDuration: 10"
+           class="overlay">
+        <!--           style="display: none" class="overlay">-->
+        <a data-bind="visible: url, attr: { href: url }" target="_blank">
+          <i class="fa fa-external-link"></i>
+        </a>
+      </div>
+      <div data-bind="animateCss: style" class="flex-item-inner nowrap">
+          <ul>
+            <li data-bind="text: project" class="project"></li>
+            <li>
+              <span data-bind="text: definition, visible: definition" class="definition"></span>
+            </li>
+            <li>
+
+            </li>
+            <li>
+              <span data-bind="text: statusText" class="middle status"></span>
+            </li>
+            <li>
+              <span data-bind="text: time" class="middle time"></span>
+            </li>
+            <li>
+              <span data-bind="text: duration" class="middle time"></span>
+            </li>
+            <li>
+              <span class="middle requestedFor-block">
+                <span class="middle fa fa-user"></span>
+                <span data-bind="text: requestedFor" class="middle for"></span>
+              </span>
+            </li>
+            <li>
+
+            </li>
+            <li>
+              <span class="middle warnings">
+                <span data-bind="visible: hasWarnings" class="middle fa fa-exclamation-triangle"></span>
+                <span data-bind="visible: hasErrors" class="middle fa fa-times-circle"></span>
+              </span>
+            </li>
+
+            <li class="card-bottom">
+              <span data-bind="text: number" class="number"></span>
+            </li>
+
+          </ul>
+
+
+        <div class="medium-height nowrap prio-vertical-one">
+
+          <span class="middle duration-block reset-height prio-horizontal-three">
+
+            <br/>
+
+          </span>
+        </div>
+        <div class="medium-height nowrap prio-vertical-three">
+
+
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
