@@ -90,7 +90,8 @@ module.exports = function () {
             return {
                 id: project.id + '|' + build.id,
                 number: build.id,
-                project: project.name + '/' + build.ref,
+                // project: project.name + '/' + build.ref,
+                project: build.ref,
                 branch: build.ref,
                 commit: build.sha ? build.sha.substr(0, 7) : undefined,
                 isRunning: ['running', 'pending'].includes(build.status),
@@ -102,7 +103,8 @@ module.exports = function () {
                 reason: getCommitMessage(build),
                 hasErrors: false,
                 hasWarnings: false,
-                url: getBuildUrl(project, build)
+                url: getBuildUrl(project, build),
+                description: self.config.description
             };
         },
         getDateTime = function(dateTime) {

@@ -171,7 +171,8 @@ module.exports = function () {
                 reason: "Build",
                 hasErrors: false,
                 hasWarnings: res.result == 'UNSTABLE',
-                url: self.configuration.url + '/job/' + res.jobId + '/' + res.number
+                url: self.configuration.url + '/job/' + res.jobId + '/' + res.number,
+                description: self.configuration.description
             };
         };
 

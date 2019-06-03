@@ -64,7 +64,7 @@
   /*flex-basis: 503px;*/
   flex-basis: 30%;
   flex-grow: 1;
-  background-color: #dd4501;
+  /*background-color: #dd4501;*/
   margin: 21px;
   /*padding: 20px;*/
 
@@ -111,6 +111,12 @@
   font-weight: bold;
   text-align: center;
   vert-align: middle;
+}
+.mom .flex-item .description {
+  color: #DDDDDD;
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: right;
 }
 
 .mom .flex-item .project-definition-separator {
