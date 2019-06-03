@@ -198,6 +198,35 @@
   margin-top:auto;
 }
 
+/*Apply styled based on status - currently the statuses are defined as colours
+TODO: Fix the names of the satuses coming back */
+.mom .flex-item .Green {
+  background-color: green;
+}
+
+.mom .flex-item .Blue {
+  background-color: green;
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.mom .flex-item .Red {
+  background-color: green;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.5;
+    height: calc(initial * 1) ;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
 /*@media (max-height: 600px) {*/
 /*  .mom .prio-vertical-one {*/
 /*    display: none;*/
